@@ -1,6 +1,4 @@
 #include <stdio.h>
 
-int main(void)
-{
-    printf("hello, world\n");
-}
+int main()
+{char EncriptedMessage[99]}
