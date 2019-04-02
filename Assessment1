@@ -1,5 +1,0 @@
-<Stdio.h>
-int main {
-printf("Helloworld")
-}
-Return 0 
