@@ -33,24 +33,24 @@ int RotationEncription()
     
     for (x = 0; Arr[x]!= '\0' ; x++ ) // Checks every number entered into Array [Since at the end of every array is \0]
 
-    chr = Arr[x] ; 
+    Arr[x] = Arr[x] +shift; 
     
-    if (chr >= 'a' && chr <= 'z') { // For letters between a and z on ASCII
-    chr = chr + shift ; 
-    
-    if (chr > 'z') {
-        chr = chr - 'z' + 'a' - 1 ; } // Stops any Digits 
-  Arr[x]=chr ; 
-  }
-  else if (chr >= 'A' && chr<= 'Z') 
-  {
-      chr = chr + shift ; 
-      if (chr > 'Z')
-      {
-          chr = chr - 'Z' + 'A' - 1 ; 
-      }
-      Arr[x]=chr ; 
-  }
+//    if (chr >= 'a' && chr <= 'z') { // For letters between a and z on ASCII
+//    chr = chr + shift ; 
+//    
+//    if (chr > 'z') {
+//        chr = chr - 'z' + 'a' - 1 ; } // Wraps Rotation Cipher Back around 
+//  Arr[x]=chr ; 
+//  }
+//  else if (chr >= 'A' && chr<= 'Z') 
+//  {
+//      chr = chr + shift ; 
+//      if (chr > 'Z')
+//      {
+//          chr = chr - 'Z' + 'A' - 1 ; 
+//      }
+//      Arr[x]=chr ; 
+//  }
   printf ("Encription: %s\n", Arr);
   
   return 0 ; }
