@@ -52,6 +52,7 @@ int RotationEncription()
       Arr[x]=chr ; 
   }
   printf ("Encription: %s\n", Arr);
+  
   return 0 ; }
   
   int RotationDecription() {
