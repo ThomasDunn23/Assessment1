@@ -22,31 +22,36 @@ switch (inp) {
 
 int RotationEncription()
 {
-    char Arr[99], chr ;  // Announcing Array and Message
+    char Arr[99];
+    char chr = 0 ;  // Announcing Array and Message
     int x, shift  ;
 
     printf("Enter Message to Encript:\n") ; // Printing useable interface
-    scanf ("%c" , &chr);
+    scanf("%s" , Arr);
     printf("Enter Number of Shifts in Encription: \n" ); // User enters how many times they want to shift the cipher 
-    scanf ("%d" , &shift);
+    scanf("%d" , &shift);
     
-    for (x = 0; Arr[x]!= '\0' ; x++ ) // \0 is the end of the array 
+    for (x = 0; Arr[x]!= '\0' ; x++ ) // Checks every number entered into Array [Since at the end of every array is \0]
 
     chr = Arr[x] ; 
+    
     if (chr >= 'a' && chr <= 'z') { // For letters between a and z on ASCII
     chr = chr + shift ; 
+    
     if (chr > 'z') {
-        chr = chr - 'z' + 'a' - 1 ; } // Stops 
+        chr = chr - 'z' + 'a' - 1 ; } // Stops any Digits 
   Arr[x]=chr ; 
   }
-  else if (chr >= 'A' && chr<= 'Z') {
+  else if (chr >= 'A' && chr<= 'Z') 
+  {
       chr = chr + shift ; 
-      if (chr > 'Z') {
+      if (chr > 'Z')
+      {
           chr = chr - 'Z' + 'A' - 1 ; 
       }
       Arr[x]=chr ; 
   }
-  printf ("Encription: %s", Arr);
+  printf ("Encription: %s\n", Arr);
   return 0 ; }
   
   int RotationDecription() {
