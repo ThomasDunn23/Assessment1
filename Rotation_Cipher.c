@@ -2,12 +2,11 @@
 
 /*Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" */
 
-int RotationEncription();
+int RotationEncription(); // Declaring the functions used in this code / 
 int RotationDecription();
 
 
-
-int main() { 
+int main() {  // This function uses a switch statement to open up seperate functions//
 int inp ; 
 printf("Press 1 to open Encription:" ) ;
 scanf ("%d", &inp);
@@ -32,8 +31,12 @@ int RotationEncription()
     scanf("%d" , &shift);
     
     for (x = 0; Arr[x]!= '\0' ; x++ ) // Checks every number entered into Array [Since at the end of every array is \0]
-
-    Arr[x] = Arr[x] +shift; 
+    if ((Arr[x] + shift) >= 65 && (Arr[x] + shift) <= 90){
+    Arr[x] = Arr[x] +shift; }
+    else {
+        Arr[x] = Arr [x] + (shift - 26) ;
+    }
+    
     
 //    if (chr >= 'a' && chr <= 'z') { // For letters between a and z on ASCII
 //    chr = chr + shift ; 
