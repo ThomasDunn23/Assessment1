@@ -1,6 +1,6 @@
-#include <stdio.h>
+/*#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE
 
-/*Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" */
+//Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" 
 
 int RotationEncription(); // Declaring the functions used in this code / 
 int RotationDecription();
@@ -72,7 +72,7 @@ int RotationEncription()
 
     printf("Enter Message to Decript:\n") ; // Printing useable interface
     scanf("%s" , Arr);
-    printf("Enter Number of Shifts in Decription: \n" ); // User enters how many times they want to shift the cipher 
+    printf("Enter Known Number of Shifts to Decript: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
     
     for (x = 0; Arr[x]!= '\0' ; x++ ) // Checks every number entered into Array [Since at the end of every array is \0]
@@ -87,6 +87,9 @@ int RotationEncription()
     else {
         Arr [x] = Arr[x] - (shift - 26) ; 
     }
+     printf ("Decription: %s\n", Arr);
+  
+  return 0 ; } */
     
   
 

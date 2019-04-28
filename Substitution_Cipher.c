@@ -1,4 +1,4 @@
-/* #include <stdio.h> // Will need to remove comment to run code 
+ #include <stdio.h> // Will need to remove comment to run code 
 
 int SubstitutionEncription() ;
 int SubstitutionDecription() ;
@@ -15,6 +15,6 @@ switch (inp) {
 }}
 
 int SubstitutionEncription()
-{}
-}
-} */ // REMOVE THIS COMMENT to run code 
+
+
+ */ // REMOVE THIS COMMENT to run code 
