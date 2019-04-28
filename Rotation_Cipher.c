@@ -9,7 +9,7 @@ int RotationDecriptionBrute();
 
 int main() {  // This function uses a switch statement to open up seperate functions//
 int inp ; 
-printf("Press 1 to open Encription and 2 for Decription:" ) ;
+printf("Press 1 For Encription, 2 for Decription and 3 for Brute Attack:" ) ;
 scanf ("%d", &inp);
 switch (inp) {
     case 1 : RotationEncription() ; 
@@ -32,7 +32,6 @@ int RotationEncription()
     scanf("%s" , Arr);
     printf("Enter Number of Shifts in Encription: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
-    
     for (x = 0; Arr[x]!= '\0' ; x++ ) {// Checks every number entered into Array [Since at the end of every array is \0]
     if (Arr[x]>96 && Arr[x]<123){
         Arr[x] = Arr [x] -32 ;
