@@ -1,4 +1,4 @@
-#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE
+/*#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE
 #include <string.h>
 //Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" 
 
@@ -34,31 +34,14 @@ int RotationEncription()
     scanf("%d" , &shift);
     for (x = 0; Arr[x]!= '\0' ; x++ ) {// Checks every number entered into Array [Since at the end of every array is \0]
     if (Arr[x]>96 && Arr[x]<123){
-        Arr[x] = Arr [x] -32 ;
+        Arr[x] = Arr [x] -32 ; //Changing Lowercase Input to Uppercase by subsituting ASCII values 
     }
     if ((Arr[x] + shift) >= 65 && (Arr[x] + shift) <= 90){
     Arr[x] = Arr[x] +shift; }
     else {
-        Arr[x] = Arr [x] + (shift - 26) ;
+        Arr[x] = Arr [x] + (shift - 26) ; // Wrapping Text around for values greater than Z
     }}
     
-    
-//    if (chr >= 'a' && chr <= 'z') { // For letters between a and z on ASCII
-//    chr = chr + shift ; 
-//    
-//    if (chr > 'z') {
-//        chr = chr - 'z' + 'a' - 1 ; } // Wraps Rotation Cipher Back around 
-//  Arr[x]=chr ; 
-//  }
-//  else if (chr >= 'A' && chr<= 'Z') 
-//  {
-//      chr = chr + shift ; 
-//      if (chr > 'Z')
-//      {
-//          chr = chr - 'Z' + 'A' - 1 ; 
-//      }
-//      Arr[x]=chr ; 
-//  }
   printf ("Encription: %s\n", Arr);
   
   return 0 ; }
