@@ -8,7 +8,7 @@ int RotationDecription();
 
 int main() {  // This function uses a switch statement to open up seperate functions//
 int inp ; 
-printf("Press 1 to open Encription:" ) ;
+printf("Press 1 to open Encription and 2 for Decription:" ) ;
 scanf ("%d", &inp);
 switch (inp) {
     case 1 : RotationEncription() ; 
@@ -36,6 +36,12 @@ int RotationEncription()
     else {
         Arr[x] = Arr [x] + (shift - 26) ;
     }
+    if ((Arr[x] + shift) >= 97 && (Arr[x] + shift) <= 122){
+        Arr[x] = Arr[x] + shift; 
+    }
+    else {
+        Arr [x] = Arr[x] + (shift - 26) ; 
+    }
     
     
 //    if (chr >= 'a' && chr <= 'z') { // For letters between a and z on ASCII
@@ -58,9 +64,30 @@ int RotationEncription()
   
   return 0 ; }
   
-  int RotationDecription() {
-      printf("Havent Completed this function Yet"); 
-      return 0 ; 
-  }
+  int RotationDecription() 
+  {
+    char Arr[99];
+    char chr = 0 ;  // Announcing Array and Message
+    int x, shift  ;
+
+    printf("Enter Message to Decript:\n") ; // Printing useable interface
+    scanf("%s" , Arr);
+    printf("Enter Number of Shifts in Decription: \n" ); // User enters how many times they want to shift the cipher 
+    scanf("%d" , &shift);
+    
+    for (x = 0; Arr[x]!= '\0' ; x++ ) // Checks every number entered into Array [Since at the end of every array is \0]
+    if ((Arr[x] + shift) >= 65 && (Arr[x] + shift) <= 90){
+    Arr[x] = Arr[x] - shift; }
+    else {
+        Arr[x] = Arr [x] - (shift - 26) ;
+    }
+    if ((Arr[x] + shift) >= 97 && (Arr[x] + shift) <= 122){
+        Arr[x] = Arr[x] - shift; 
+    }
+    else {
+        Arr [x] = Arr[x] - (shift - 26) ; 
+    }
+    
+  
 
  
