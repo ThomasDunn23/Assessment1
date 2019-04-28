@@ -1,5 +1,5 @@
-/*#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE
-
+#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE
+#include <string.h>
 //Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" 
 
 int RotationEncription(); // Declaring the functions used in this code / 
@@ -30,18 +30,15 @@ int RotationEncription()
     printf("Enter Number of Shifts in Encription: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
     
-    for (x = 0; Arr[x]!= '\0' ; x++ ) // Checks every number entered into Array [Since at the end of every array is \0]
+    for (x = 0; Arr[x]!= '\0' ; x++ ) {// Checks every number entered into Array [Since at the end of every array is \0]
+    if (Arr[x]>96 && Arr[x]<123){
+        Arr[x] = Arr [x] -32 ;
+    }
     if ((Arr[x] + shift) >= 65 && (Arr[x] + shift) <= 90){
     Arr[x] = Arr[x] +shift; }
     else {
         Arr[x] = Arr [x] + (shift - 26) ;
-    }
-    if ((Arr[x] + shift) >= 97 && (Arr[x] + shift) <= 122){
-        Arr[x] = Arr[x] + shift; 
-    }
-    else {
-        Arr [x] = Arr[x] + (shift - 26) ; 
-    }
+    }}
     
     
 //    if (chr >= 'a' && chr <= 'z') { // For letters between a and z on ASCII
@@ -74,22 +71,21 @@ int RotationEncription()
     scanf("%s" , Arr);
     printf("Enter Known Number of Shifts to Decript: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
-    
-    for (x = 0; Arr[x]!= '\0' ; x++ ) // Checks every number entered into Array [Since at the end of every array is \0]
-    if ((Arr[x] + shift) >= 65 && (Arr[x] + shift) <= 90){
+   for (x = 0; Arr[x]!= '\0' ; x++ ) {// Checks every number entered into Array [Since at the end of every array is \0]
+    if (Arr[x]>96 && Arr[x]<123){
+        Arr[x] = Arr [x] -32 ;
+    }
+    if ((Arr[x] - shift) >= 65 && (Arr[x] - shift) <= 90){
     Arr[x] = Arr[x] - shift; }
     else {
         Arr[x] = Arr [x] - (shift - 26) ;
-    }
-    if ((Arr[x] + shift) >= 97 && (Arr[x] + shift) <= 122){
-        Arr[x] = Arr[x] - shift; 
-    }
-    else {
-        Arr [x] = Arr[x] - (shift - 26) ; 
-    }
+    }}
+    
+     
+    
      printf ("Decription: %s\n", Arr);
   
-  return 0 ; } */
+  return 0 ; } 
     
   
 

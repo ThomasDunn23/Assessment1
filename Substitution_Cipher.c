@@ -1,4 +1,4 @@
- #include <stdio.h> // Will need to remove comment to run code 
+/* #include <stdio.h> // Will need to remove comment to run code 
 
 int SubstitutionEncription() ;
 int SubstitutionDecription() ;
