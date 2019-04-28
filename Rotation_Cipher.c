@@ -2,35 +2,35 @@
 #include <string.h>
 //Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" 
 
-int RotationEncription(); // Declaring the functions used in this code / 
-int RotationDecription();
-int RotationDecriptionBrute();
+int RotationEncryption(); // Declaring the functions used in this code / 
+int RotationDecryption();
+int RotationDecryptionBrute();
 
 
 int main() {  // This function uses a switch statement to open up seperate functions//
 int inp ; 
-printf("Press 1 For Encription, 2 for Decription and 3 for Brute Attack:" ) ;
+printf("Press 1 For Encryption, 2 for Decryption and 3 for Brute Attack:" ) ;
 scanf ("%d", &inp);
 switch (inp) {
-    case 1 : RotationEncription() ; 
+    case 1 : RotationEncryption() ; 
     break ;
-    case 2 : RotationDecription() ;
+    case 2 : RotationDecryption() ;
     break ; 
-    case 3 : RotationDecriptionBrute() ; 
+    case 3 : RotationDecryptionBrute() ; 
     break ;
 }}
 
 
 
-int RotationEncription()
+int RotationEncryption()
 {
     char Arr[99];
     char chr = 0 ;  // Announcing Array and Message
     int x, shift  ;
 
-    printf("Enter Message to Encript:\n") ; // Printing useable interface
+    printf("Enter Message to Encrypt:\n") ; // Printing useable interface
     scanf("%s" , Arr);
-    printf("Enter Number of Shifts in Encription: \n" ); // User enters how many times they want to shift the cipher 
+    printf("Enter Number of Shifts in Encryption: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
     for (x = 0; Arr[x]!= '\0' ; x++ ) {// Checks every number entered into Array [Since at the end of every array is \0]
     if (Arr[x]>96 && Arr[x]<123){
@@ -42,19 +42,19 @@ int RotationEncription()
         Arr[x] = Arr [x] + (shift - 26) ; // Wrapping Text around for values greater than Z
     }}
     
-  printf ("Encription: %s\n", Arr);
+  printf ("Encryption: %s\n", Arr);
   
   return 0 ; }
   
-  int RotationDecription() 
+  int RotationDecryption() 
   {
     char Arr[99];
     char chr = 0 ;  // Announcing Array and Message
     int x, shift  ;
 
-    printf("Enter Message to Decript:\n") ; // Printing useable interface
+    printf("Enter Message to Decrypt:\n") ; // Printing useable interface
     scanf("%s" , Arr);
-    printf("Enter Known Number of Shifts to Decript: \n" ); // User enters how many times they want to shift the cipher 
+    printf("Enter Known Number of Shifts to Decrypt: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
    for (x = 0; Arr[x]!= '\0' ; x++ ) {// Checks every number entered into Array [Since at the end of every array is \0]
     if (Arr[x]>96 && Arr[x]<123){
@@ -68,19 +68,19 @@ int RotationEncription()
     
      
     
-     printf ("Decription: %s\n", Arr);
+     printf ("Decryption: %s\n", Arr);
   
   return 0 ; } 
   
-  int RotationDecriptionBrute()
+  int RotationDecryptionBrute()
    {
     char Arr[99];
     char chr = 0 ;  // Announcing Array and Message
     int x, shift  ;
 
-    printf("Enter Message to Decript:\n") ; // Printing useable interface
+    printf("Enter Message to Decrypt:\n") ; // Printing useable interface
     scanf("%s" , Arr);
-    printf("Enter Known Number of Shifts to Decript: \n" ); // User enters how many times they want to shift the cipher 
+    printf("Enter Known Number of Shifts to Decrypt: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
     for (shift=0 ; shift <27; shift++){
    for (x = 0; Arr[x]!= '\0' ; x++ ) {// Checks every number entered into Array [Since at the end of every array is \0]
@@ -98,7 +98,7 @@ int RotationEncription()
      printf ("Brute Force Key %d: %s\n", shift , Arr);
 }
   
-  return 0 ; } 
+  return 0 ; } */
     
   
 

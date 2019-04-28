@@ -1,23 +1,23 @@
  #include <stdio.h> // Will need to remove comment to run code 
 
-int SubstitutionEncription() ;
-int SubstitutionDecription() ;
+int SubstitutionEncryption() ;
+int SubstitutionDecryption() ;
 
 int main () {
 int inp ; 
-printf("Press 1 to open Encription or 2 to open Decription:"); 
+printf("Press 1 to open Encryption or 2 to open Decryption:"); 
 scanf("%d", &inp); 
 switch (inp) {
-    case 1 : SubstitutionEncription() ;
+    case 1 : SubstitutionEncryption() ;
     break ; 
-    case 2 : SubstitutionDecription() ; 
+    case 2 : SubstitutionDecryption() ; 
     break ; 
 }}
 
-    int SubstitutionEncription(){
+    int SubstitutionEncryption(){
     char Arr[99];
     int x, i , key;
-    printf ("Enter Message to Encript:\n");
+    printf ("Enter Message to Encrypt:\n");
     scanf("%s" , Arr); 
     printf ("Key: \n"); 
     scanf("%d" , &key);
@@ -26,17 +26,18 @@ switch (inp) {
     if (Arr[x]>96 && Arr[x]< 123){
          Arr[x] = Arr [x] - 32 ; //Changing Lowercase Input to Uppercase by subsituting ASCII values 
     }}
-    if (key=1) {
+    if (key=1) { 
         char Key1[26] = "QAZWSXEDCRFVTGBYHNUJMIKOLP" ; 
         for (i = 0; Arr[i] != '\0'; i++) {
+            x = (int)Arr[i];
         if (x>64 && x<91) {
             x = x - 65;
             Arr[i] = Key1[x] ; 
     }}
-    printf ("Encripted Message: %s", Arr) ; }
+    printf ("\nEncrypted Message: %s\n", Arr) ; }
     return 0 ; }
     
-    int SubstitutionDecription (){
+    int SubstitutionDecryption (){
         
     }
     
