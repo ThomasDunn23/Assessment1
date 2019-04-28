@@ -1,4 +1,4 @@
-/*#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE
+/*#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE OR COMMENT CODE OUT TO RUN SUBSTITUTION 
 #include <string.h>
 //Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" 
 
@@ -80,9 +80,9 @@ int RotationEncryption()
 
     printf("Enter Message to Decrypt:\n") ; // Printing useable interface
     scanf("%s" , Arr);
-    printf("Enter Known Number of Shifts to Decrypt: \n" ); // User enters how many times they want to shift the cipher 
+    printf("Enter Any Number to Start Decrypt: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
-    for (shift=0 ; shift <27; shift++){
+    for (shift=0 ; shift <25; shift++)  {
    for (x = 0; Arr[x]!= '\0' ; x++ ) {// Checks every number entered into Array [Since at the end of every array is \0]
     if (Arr[x]>96 && Arr[x]<123){
         Arr[x] = Arr [x] -32 ;
@@ -91,11 +91,12 @@ int RotationEncryption()
     Arr[x] = Arr[x] - shift; }
     else {
         Arr[x] = Arr [x] - (shift - 26) ;
-    }}
+    }
+    }
     
      
     
-     printf ("Brute Force Key %d: %s\n", shift , Arr);
+     printf ("%d Number of Shifts: %s\n", shift , Arr);
 }
   
   return 0 ; } */

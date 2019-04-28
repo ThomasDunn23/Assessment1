@@ -1,5 +1,5 @@
- #include <stdio.h> // Will need to remove comment to run code 
-
+ #include <stdio.h> // Will need to remove comment to run code OR comment this code out to run Rotation Cipher
+//Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" 
 int SubstitutionEncryption() ;
 int SubstitutionDecryption() ;
 
@@ -73,4 +73,4 @@ switch (inp) {
 
 
 
- // REMOVE THIS COMMENT to run code 
+// REMOVE THIS COMMENT to run code 
