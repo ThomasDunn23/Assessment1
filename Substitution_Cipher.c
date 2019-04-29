@@ -20,9 +20,10 @@ switch (inp)
     int SubstitutionEncryption() // Introduces Individual Function 
  { 
     char Arr[99];
-    int x, i , key;
+    int x, i , key, T;
     printf ("Enter Message to Encrypt:\n"); // User Interface
-    scanf("%s" , Arr); 
+    scanf("%d" , &T); //Acting Input Buffer for scanf below
+    scanf("%[^\n]s" , Arr); 
     printf ("Key: \n"); 
     scanf("%d" , &key);
     printf ("Key: %d" , key ); 
@@ -53,9 +54,10 @@ switch (inp)
     int SubstitutionDecryption ()// Introduces Individual Function
  {  
     char Arr[99];
-    int x, i , key;
+    int x, i , key, T;
     printf ("Enter Message to Decrypt:\n"); // User Interface
-    scanf("%s" , Arr); 
+    scanf("%d", &T);
+    scanf("%[^\n]s" , Arr); 
     printf ("Key: \n"); 
     scanf("%d" , &key);
     printf ("Key: %d" , key ); 
