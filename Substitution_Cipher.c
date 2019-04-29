@@ -1,4 +1,4 @@
-#include <stdio.h> // Will need to remove comment to run code OR comment this code out to run Rotation Cipher
+/*#include <stdio.h> // Will need to remove comment to run code OR comment this code out to run Rotation Cipher
 //Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" 
 int SubstitutionEncryption() ;
 int SubstitutionDecryption() ;
@@ -19,7 +19,7 @@ switch (inp)
 
     int SubstitutionEncryption() // Introduces Individual Function 
  { 
-    char Arr[99];
+    char Arr[999];
     int x, i , key, T;
     printf ("Enter Message to Encrypt:\n"); // User Interface
     scanf("%d" , &T); //Acting Input Buffer for scanf below
@@ -53,7 +53,7 @@ switch (inp)
     
     int SubstitutionDecryption ()// Introduces Individual Function
  {  
-    char Arr[99];
+    char Arr[999];
     int x, i , key, T;
     printf ("Enter Message to Decrypt:\n"); // User Interface
     scanf("%d", &T);
@@ -98,4 +98,4 @@ switch (inp)
 
 
 
- // REMOVE THIS COMMENT to run code 
+*/ // REMOVE THIS COMMENT to run code 
