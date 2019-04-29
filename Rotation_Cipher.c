@@ -1,4 +1,4 @@
-#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE OR COMMENT CODE OUT TO RUN SUBSTITUTION 
+/*#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE OR COMMENT CODE OUT TO RUN SUBSTITUTION 
 #include <string.h>
 //Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" 
 
@@ -125,6 +125,6 @@ int RotationEncryption()
   return 0 ;
   } 
     
-  
+  */
 
  
