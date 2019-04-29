@@ -1,4 +1,4 @@
-/*#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE OR COMMENT CODE OUT TO RUN SUBSTITUTION 
+#include <stdio.h> //WILL NEED TO REMOVE PREVIOUS COMMENT TO RUN CODE OR COMMENT CODE OUT TO RUN SUBSTITUTION 
 #include <string.h>
 //Before Running Code- Right Click on .c Program on left , Open in terminal , then type "./a.out" 
 
@@ -27,12 +27,13 @@ switch (inp)
 
 int RotationEncryption()
 {
-    char Arr[99];
+    char Arr[999];
     char chr = 0 ;  // Announcing Array and Message
-    int x, shift  ;
+    int x, shift, T  ;
 
     printf("Enter Message to Encrypt:\n") ; // Printing useable interface
-    scanf("%s" , Arr);
+    scanf("%d" , &T); // Used as an Input Buffer for scanf alone
+    scanf("%[^\n]s" , Arr);
     printf("Enter Number of Shifts in Encryption: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
     for (x = 0; Arr[x]!= '\0' ; x++ ) // Checks every number entered into Array [Since at the end of every array is \0]
@@ -58,12 +59,13 @@ int RotationEncryption()
   
   int RotationDecryption() 
   {
-    char Arr[99];
+    char Arr[999];
     char chr = 0 ;  // Announcing Array and Message
-    int x, shift  ;
+    int x, shift , T ;
 
     printf("Enter Message to Decrypt:\n") ; // Printing useable interface
-    scanf("%s" , Arr);
+    scanf("%d" , &T);//Input Buffer 
+    scanf("%[^\n]s", Arr);
     printf("Enter Known Number of Shifts to Decrypt: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
    for (x = 0; Arr[x]!= '\0' ; x++ ) // Checks every number entered into Array [Since at the end of every array is \0]
@@ -91,12 +93,13 @@ int RotationEncryption()
   
   int RotationDecryptionBrute()
    {
-    char Arr[99];
+    char Arr[999];
     char chr = 0 ;  // Announcing Array and Message
-    int x, shift  ;
+    int x, shift, T  ;
 
     printf("Enter Message to Decrypt:\n") ; // Printing useable interface
-    scanf("%s" , Arr);
+    scanf("%d", &T);
+    scanf("%[^\n]s" , Arr);
     printf("Enter Any Number to Start Decrypt: \n" ); // User enters how many times they want to shift the cipher 
     scanf("%d" , &shift);
     for (shift=0 ; shift <25; shift++)
@@ -125,6 +128,6 @@ int RotationEncryption()
   return 0 ;
   } 
     
-  */
+  
 
  
